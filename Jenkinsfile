@@ -1,6 +1,7 @@
 node('haimaxy-jnlp') {
     stage('Prepare') {
         echo "1.Prepare Stage"
+        sh "ssh -fN -L 36353:127.0.0.1:36353 root@172.30.86.124 -i /root/.ssh/wsl"
         checkout scm
         script {
             build_tag = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
