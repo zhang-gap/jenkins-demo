@@ -14,7 +14,7 @@ node('haimaxy-jnlp') {
     }
     stage('Build') {
         echo "3.Build Docker Image Stage"
-        sh "docker build -t crpi-ixa35oe96frgh26s.cn-beijing.personal.cr.aliyuncs.com/jenkin-demo/pipeline:${build_tag} ." #注意镜像标签替换成自己需要的
+        sh "docker build -t crpi-ixa35oe96frgh26s.cn-beijing.personal.cr.aliyuncs.com/jenkin-demo/pipeline:${build_tag} ."
     }
     stage('Push') {
         echo "4.Push Docker Image Stage"
